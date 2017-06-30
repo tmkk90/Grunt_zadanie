@@ -1,0 +1,478 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:400,500)
+
+$color-white: white
+
+=team-view($margin, $height, $width, $radius)
+	margin: $margin
+	height: $height
+	width: $width
+	border-radius: $radius
+
+
+* 
+	box-sizing: border-box	
+	
+[class*="col-"] 
+	float: left
+	margin: 0 auto
+	text-align: center
+	text-transform: uppercase
+
+/* HEADER */
+
+.container 
+
+	max-width: 1200px
+	margin: 0 auto
+
+
+.row:before,
+.row:after 
+	content: ""
+	display: table 
+	clear: both
+
+
+header 
+	background: #313234
+	height: 50px	
+
+
+body
+	margin: 0
+	font-family: 'Rubik', sans-serif
+
+
+header 
+	nav 
+		ul 
+			padding: 0px
+			float: right
+			margin: 0 auto
+			line-height: 50px
+			
+			li
+				display: inline-block
+				
+				a
+					color: $color-white
+					text-decoration: none
+					text-transform: uppercase
+					display: block
+					padding: 0 10px
+		
+		img 
+			padding: 10px 0
+
+			&:hover 
+				background: white
+				color: #313234	
+
+
+/* Hero */
+
+.hero 
+	background: url(http://greeleymuseums.com/wp-content/uploads/2015/07/EarthfromSpace1200X350.jpg)
+	margin: 0 auto
+	height: 300px
+	
+	/* Slogan */
+	
+	h1 
+		width: auto
+		max-width: 300px
+		float: right
+		padding: 40px 40px 40px 10px
+		background-color: black
+		color: $color-white
+		opacity: 0.6
+		position: relative
+		top: 60px
+
+
+/*Benefits*/
+
+
+
+.benefits 
+
+	max-width: 1200px
+
+	i 
+		font-size: 50px
+		background: #34495e
+		color: $color-white
+		border-radius: 10px
+		transition: ease-in-out .3s
+		padding: 10px	
+		margin: 40px auto 0
+
+		&:hover 
+			background: white
+			color: #34495e
+			transition: ease-in-out .3s
+	
+	p 
+		color: #2c3e50	
+
+
+.col-6 
+	padding: 0 10px
+	text-align: center
+	text-transform: uppercase
+	margin: 40px 0 0 0
+
+
+/*galeria*/
+
+.gallery 
+	margin: 80px auto
+
+	img 
+		height: 100%
+		width: 100%
+		display: block
+
+
+	.gallery-img 
+		position: relative	
+
+		.icons
+			height: 100%
+			width: 100%
+			padding-top: 60px
+			position: absolute
+			color: $color-white
+			visibility: hidden
+			background: rgba(0,0,0, 0.5)
+
+
+
+
+	.col-2
+		&:hover 
+			.icons
+				visibility: visible
+
+
+
+
+
+/*Team*/
+
+.team 
+	margin: 80px auto
+	max-width: 1200px
+
+	.col-3 
+		.layer 
+			position: relative
+			visibility: hidden
+			background: rgba(0,0,0, 0.5)
+			text-align: center
+			height: 100%
+			width: 100%
+			border-radius: 50%
+			
+			p 
+				position: relative
+				top: 50%
+
+		.picture1 
+			background: url(https://images.pexels.com/photos/355164/pexels-photo-355164.jpeg?h=350&auto=compress&cs=tinysrgb)
+			+team-view(0 auto, 20vh, 20vh, 50%)
+
+		.picture2 
+			background: url(https://images.pexels.com/photos/51969/model-female-girl-beautiful-51969.jpeg?h=350&auto=compress&cs=tinysrg)	
+			+team-view(0 auto, 20vh, 20vh, 50%)
+
+		.picture3 
+			background: url(https://images.pexels.com/photos/144433/pexels-photo-144433.jpeg?h=350&auto=compress&cs=tinysrgb)
+			+team-view(0 auto, 20vh, 20vh, 50%)
+
+		.picture4 
+			background: url(https://images.pexels.com/photos/196655/pexels-photo-196655.jpeg?w=940&h=650&auto=compress&cs=tinysrgb)
+			+team-view(0 auto, 20vh, 20vh, 50%)
+
+		&:hover 
+			.layer
+				visibility: visible
+				color: $color-white
+				font-weight: bold
+
+
+/* PROMOTION*/
+
+.promotion 
+	margin: 80px auto
+	background-color: #34495e
+	color: $color-white
+
+	img 
+		height: 100%
+		width: 100%
+		padding: 20px
+	
+	h2 
+		text-align: left	
+
+	p 
+		color: #7f8c8d	
+		text-align: left
+
+
+/*Numbers*/
+
+.numbers 
+	margin: 80px auto		
+	
+p 
+	color: #2980b9	
+
+
+/*footer*/
+
+.footer 
+	margin: 80px 0 0
+	background-color: #2c3e50
+	color: $color-white
+	
+	.col-4 .col-6 
+		margin: 0 auto
+		padding: 0
+
+
+/*social*/
+
+.social 
+	margin: 0 auto
+	width: 500px
+	text-align: center
+	padding: 50px
+
+	.icon-btn 
+		width: 45px
+		height: 45px
+		border: 0
+		color: #FFFFFF
+		margin: 0
+		border-radius: 100%
+		float: left
+		margin: 0 10px
+
+	&:hover 
+		cursor: pointer
+		transform: scale(1.10)
+
+	&:hover .fa 
+		font-size: 40px
+		color: #FFFFFF
+
+	.fa-twitter 
+		color: #4099FF	
+	
+	.fa-facebook 
+		color: #3B5998	
+	
+	.fa-google-plus 
+		color: #DB5A3C	
+	
+	.fa-instagram 
+		color: #5C3D2E	
+	
+	.fa-github 
+		color: #4183C4	
+
+		.twitter
+			&:hover 
+				background: #4099FF
+
+		.facebook 
+			&:hover 
+				background: #3B5998
+
+		.google-plus 
+			&:hover 
+				background: #DB5A3C
+
+		.instagram
+			&:hover 
+				background: #5C3D2E
+
+		.github 
+			&:hover 
+				background: #4183C4
+
+	.fa 
+		font-size: 20px
+		transition: 1s
+
+
+.lastrow 
+	background-color: #313234
+	text-align: center
+	padding: 10px
+
+
+
+.col-1 
+	width: 8.33% 
+.col-2 
+	width: 16.66% 
+.col-3 	
+	width: 25% 
+.col-4 
+	width: 33.33% 
+.col-5 
+	width: 41.66% 
+.col-6 
+	width: 50% 
+.col-7 
+	width: 58.33% 
+.col-8 
+	width: 66.66% 
+.col-9 
+	width: 75% 
+.col-10 
+	width: 83.33% 
+.col-11 
+	width: 91.66% 
+.col-12 
+	width: 100%
+
+.col-offset-0
+	margin-left: 0 
+.col-offset-1
+	margin-left: 8.33% 
+.col-offset-2
+	margin-left: 16.66% 
+.col-offset-3
+	margin-left: 25% 
+.col-offset-4 
+	margin-left: 33.33% 
+.col-offset-5 
+	margin-left: 41.66% 
+.col-offset-6 
+	margin-left: 50% 
+.col-offset-7
+	margin-left: 58.33% 
+.col-offset-8
+	margin-left: 66.66% 
+.col-offset-9 
+	margin-left: 75% 
+.col-offset-1	
+	margin-left: 83.33% 
+.col-offset-11 
+	margin-left: 91.66%
+
+
+/*RWD*/
+
+
+@media (max-width: 768px) 
+	
+	.col-m-1 
+		width: 8.33%
+	.col-m-2 
+		width: 16.66%
+	.col-m-3 
+		width: 25%
+	.col-m-4 
+		width: 33.33%
+	.col-m-5
+		width: 41.66%
+	.col-m-6
+		width: 50%
+	.col-m-7 
+		width: 58.33%
+	.col-m-8 
+		width: 66.66%
+	.col-m-9 
+		width: 75%
+	.col-m-10 
+		width: 83.33%
+	.col-m-11 
+		width: 91.66%
+	.col-m-12 
+		width: 100%
+
+	
+	header 
+		height: auto
+		margin: 0 auto
+		text-align: center
+		font-size: 15px	
+			
+			
+	header 
+		nav 
+			ul 
+				float: none
+				line-height: 30px
+				li 
+					display: block
+		
+
+		.hero 
+			margin: 0 auto
+			height: 200px
+		
+		
+		
+		/* Slogan */
+		
+		.hero 
+			h1 
+				width: auto
+				padding: 10px
+				position: relative
+				top: 30px
+				font-size: 20px
+		
+		
+		/*Benefits*/
+			
+		
+		
+			
+		.benefits 
+			font-size: 15px
+			margin: 0 auto
+			padding: 20px
+		
+		
+		
+		/*gallery*/
+		
+		
+		
+		.gallery 
+			img
+				height: 100%
+				width: 100%
+				display: block
+				padding: 10px
+		
+		
+		/*team*/
+		
+		/*promotion*/
+		
+		.promotion 
+			font-size: 15px
+			padding: 10px
+		
+		
+		/*numbers*/
+		
+		.numbers 
+			font-size: 15px
+	
+	
+	
+	
+
+	
+	
+		
+	
